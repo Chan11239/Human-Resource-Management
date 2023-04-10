@@ -73,7 +73,7 @@ namespace EmployeeManagement.Forms
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgPosition.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgPosition.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dgPosition.Location = new System.Drawing.Point(70, 74);
+            this.dgPosition.Location = new System.Drawing.Point(42, 75);
             this.dgPosition.Name = "dgPosition";
             this.dgPosition.ReadOnly = true;
             this.dgPosition.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -89,7 +89,7 @@ namespace EmployeeManagement.Forms
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgPosition.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgPosition.RowTemplate.Height = 25;
-            this.dgPosition.Size = new System.Drawing.Size(565, 294);
+            this.dgPosition.Size = new System.Drawing.Size(644, 294);
             this.dgPosition.TabIndex = 36;
             this.dgPosition.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPosition_CellClick);
             // 

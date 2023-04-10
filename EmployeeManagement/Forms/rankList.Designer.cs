@@ -102,7 +102,7 @@ namespace EmployeeManagement.Forms
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgRankList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgRankList.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dgRankList.Location = new System.Drawing.Point(55, 79);
+            this.dgRankList.Location = new System.Drawing.Point(12, 79);
             this.dgRankList.Name = "dgRankList";
             this.dgRankList.ReadOnly = true;
             this.dgRankList.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -118,7 +118,7 @@ namespace EmployeeManagement.Forms
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgRankList.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgRankList.RowTemplate.Height = 25;
-            this.dgRankList.Size = new System.Drawing.Size(565, 294);
+            this.dgRankList.Size = new System.Drawing.Size(695, 294);
             this.dgRankList.TabIndex = 37;
             this.dgRankList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgRankList_CellClick);
             // 

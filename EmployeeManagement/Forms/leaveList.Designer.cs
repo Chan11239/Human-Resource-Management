@@ -36,6 +36,11 @@ namespace EmployeeManagement.Forms
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label4 = new System.Windows.Forms.Label();
             this.dgLeaveList = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.allotedDays = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtAllotedDays = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,11 +51,6 @@ namespace EmployeeManagement.Forms
             this.txtCode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.allotedDays = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgLeaveList)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -96,7 +96,7 @@ namespace EmployeeManagement.Forms
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgLeaveList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgLeaveList.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dgLeaveList.Location = new System.Drawing.Point(48, 94);
+            this.dgLeaveList.Location = new System.Drawing.Point(23, 87);
             this.dgLeaveList.Name = "dgLeaveList";
             this.dgLeaveList.ReadOnly = true;
             this.dgLeaveList.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -113,9 +113,48 @@ namespace EmployeeManagement.Forms
             this.dgLeaveList.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgLeaveList.RowTemplate.Height = 25;
             this.dgLeaveList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgLeaveList.Size = new System.Drawing.Size(635, 267);
+            this.dgLeaveList.Size = new System.Drawing.Size(691, 267);
             this.dgLeaveList.TabIndex = 34;
             this.dgLeaveList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgLeaveList_CellClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // code
+            // 
+            this.code.DataPropertyName = "code";
+            this.code.HeaderText = "Code";
+            this.code.Name = "code";
+            this.code.ReadOnly = true;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Name";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            this.name.Width = 150;
+            // 
+            // description
+            // 
+            this.description.DataPropertyName = "description";
+            this.description.HeaderText = "Description";
+            this.description.Name = "description";
+            this.description.ReadOnly = true;
+            this.description.Width = 250;
+            // 
+            // allotedDays
+            // 
+            this.allotedDays.DataPropertyName = "allotedDays";
+            this.allotedDays.HeaderText = "Maximum Alloted Days";
+            this.allotedDays.Name = "allotedDays";
+            this.allotedDays.ReadOnly = true;
+            this.allotedDays.Width = 150;
             // 
             // panel1
             // 
@@ -220,45 +259,6 @@ namespace EmployeeManagement.Forms
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 6;
             this.label1.Text = "Code:";
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // code
-            // 
-            this.code.DataPropertyName = "code";
-            this.code.HeaderText = "Code";
-            this.code.Name = "code";
-            this.code.ReadOnly = true;
-            // 
-            // name
-            // 
-            this.name.DataPropertyName = "name";
-            this.name.HeaderText = "Name";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            this.name.Width = 150;
-            // 
-            // description
-            // 
-            this.description.DataPropertyName = "description";
-            this.description.HeaderText = "Description";
-            this.description.Name = "description";
-            this.description.ReadOnly = true;
-            this.description.Width = 250;
-            // 
-            // allotedDays
-            // 
-            this.allotedDays.DataPropertyName = "allotedDays";
-            this.allotedDays.HeaderText = "Maximum Alloted Days";
-            this.allotedDays.Name = "allotedDays";
-            this.allotedDays.ReadOnly = true;
-            this.allotedDays.Width = 150;
             // 
             // leaveList
             // 
