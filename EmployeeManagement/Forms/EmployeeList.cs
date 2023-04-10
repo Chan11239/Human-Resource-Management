@@ -144,28 +144,35 @@ namespace EmployeeManagement
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    connection.Open();
-                    string query = "INSERT INTO leaveApplications " +
-                                   "(employeeNo, employeeName, reasons, department, startDate, endDate, status, typeOfLeave) " +
-                                   "VALUES " +
-                                   "(@employeeNo, @employeeName, @reasons, @department, @startDate, @endDate, @status, @typeOfLeave)";
+                    if (cmboxLeave.Text == "" || txtEmployeeID.Text == "" || txtFullName.Text == "" || txtReason.Text == "")
+                    {
+                        MessageBox.Show("ERROR!");
+                    }
+                    else
+                    {
+                        connection.Open();
+                        string query = "INSERT INTO leaveApplications " +
+                                       "(employeeNo, employeeName, reasons, department, startDate, endDate, status, typeOfLeave) " +
+                                       "VALUES " +
+                                       "(@employeeNo, @employeeName, @reasons, @department, @startDate, @endDate, @status, @typeOfLeave)";
 
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@employeeNo", txtEmployeeID.Text);
-                    command.Parameters.AddWithValue("@employeeName", txtFullName.Text);
-                    command.Parameters.AddWithValue("@reasons", txtReason.Text);
-                    command.Parameters.AddWithValue("@department", txtDepartment.Text);
-                    command.Parameters.AddWithValue("@startDate", dtPickerStartDate.Value.ToString("yyyy-MMM-dd"));
-                    command.Parameters.AddWithValue("@endDate", dtPickerEndDate.Value.ToString("yyyy-MMM-dd"));
-                    command.Parameters.AddWithValue("@typeOfLeave", cmboxLeave.SelectedItem.ToString());
-                    command.Parameters.AddWithValue("@status", "PENDING");
-                    command.ExecuteNonQuery();
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@employeeNo", txtEmployeeID.Text);
+                        command.Parameters.AddWithValue("@employeeName", txtFullName.Text);
+                        command.Parameters.AddWithValue("@reasons", txtReason.Text);
+                        command.Parameters.AddWithValue("@department", txtDepartment.Text);
+                        command.Parameters.AddWithValue("@startDate", dtPickerStartDate.Value.ToString("yyyy-MMM-dd"));
+                        command.Parameters.AddWithValue("@endDate", dtPickerEndDate.Value.ToString("yyyy-MMM-dd"));
+                        command.Parameters.AddWithValue("@typeOfLeave", cmboxLeave.SelectedItem.ToString());
+                        command.Parameters.AddWithValue("@status", "PENDING");
+                        command.ExecuteNonQuery();
 
-                    connection.Close();
+                        connection.Close();
 
-                    MessageBox.Show("Leave Application On Process!");
-                    populateLeaveApplications();
-                    this.Visible = false;
+                        MessageBox.Show("Leave Application On Process!");
+                        populateLeaveApplications();
+                        this.Visible = false;
+                    }
                 }
             }
             catch(Exception ex)

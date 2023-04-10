@@ -45,6 +45,11 @@ namespace EmployeeManagement
                 MainForm mf = new MainForm();
                 mf.Show();
                 this.Hide();
+            } else
+            {
+                MessageBox.Show("ERROR! Invalid username or Password. Please Enter Again.");
+                txtPassword.Text = "";
+                txtUsername.Text = "";
             }
         }
     }
